@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="ExpensesListsContext">
+    <EntitySetMapping Name="tblExpenses">
+      <EntityTypeMapping TypeName="Models.Expenses">
+        <MappingFragment StoreEntitySet="tblExpenses">
+          <ScalarProperty Name="IDExpenses" ColumnName="IDExpenses" />
+          <ScalarProperty Name="ExpenseReason" ColumnName="ExpenseReason" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="ExpenseDate" ColumnName="ExpenseDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

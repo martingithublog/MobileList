@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ListsMobileApp.Models.Income>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<div class="jumbotron" style="">
+    <p id="lblCB">Current Balance</p>
+    <p id="lblResult">$ @Model.Sum(i => i.IncomeAmount - 200) </p>
+    <img src="~/Photos/mobile-app3.png" class="center" />
+    <div class="BalanceIncome">
+        <a class="goToInEx" href="http://localhost:58359/Incomes">
+            <h5>Current Income</h5>
+            <h5 id="h5">
+                $ @Model.Sum(i => i.IncomeAmount)
+            </h5>
+            <hr class="left" />
+        </a>
+    </div>
+    <div class="BalanceExpenses">
+        <a class="goToInEx" href="http://localhost:58359/Expenses">
+            <h5>Current Expenses</h5>
+            <h5 id="h5">
+                $ @Model.Sum(j => (j.IncomeAmount - 567))
+            </h5>
+            <hr class="right" />
+        </a>
+    </div>
+</div>
+<div class="LastBalance">
+    <h5 id="lblLMS">Last Month Status</h5>
+</div>

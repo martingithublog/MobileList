@@ -1,0 +1,44 @@
+﻿@model ListsMobileApp.Models.Expenses
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutExpenses.cshtml";
+}
+<div class="wrapperExpenses">
+    <h2 class="Theader">Details</h2>
+
+    <div>
+        <h4>Expenses</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ExpenseReason)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ExpenseReason)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ExpenseAmount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ExpenseAmount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ExpenseDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ExpenseDate)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IDExpenses }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

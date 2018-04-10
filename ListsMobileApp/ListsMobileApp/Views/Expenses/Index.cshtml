@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ListsMobileApp.Models.Expenses>
+
+@{
+    ViewBag.Title = "Expenses";
+    Layout = "~/Views/Shared/_LayoutExpenses.cshtml";
+}
+
+<div class="wrapperExpenses">
+    <h2 class="Theader">Expenses</h2>
+    <table class="table">
+        <tr>
+            <th class="Theader">
+                @Html.DisplayNameFor(model => model.ExpenseReason)
+            </th>
+            <th class="Theader">
+                @Html.DisplayNameFor(model => model.ExpenseAmount)
+            </th>
+            <th class="Theader">
+                Edit
+            </th>
+        </tr>
+        <tr>
+            <td colspan="3" style="border-top:solid 1px white;padding:0;">
+                <hr class="hrth" />
+            </td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr class="rowExpenses">
+                <td id="TData">
+                    @Html.DisplayFor(modelItem => item.ExpenseReason)
+                </td>
+                <td id="TData">
+                    @Html.DisplayFor(modelItem => item.ExpenseAmount)
+                </td>
+                <td id="TData">
+                    @Html.ActionLink("Details", "Details", new { id = item.IDExpenses }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IDExpenses }) |
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="border-top:solid 1px white;padding:0;">
+                    <hr class="hrt" />
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="goToCreate">
+        <a href="http://localhost:58359/Expenses/Create">
+            <img src="~/Photos/add.png" />
+        </a>
+    </div>
+</div>

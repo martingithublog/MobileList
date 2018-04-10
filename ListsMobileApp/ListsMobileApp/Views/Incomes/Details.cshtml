@@ -1,0 +1,46 @@
+﻿@model ListsMobileApp.Models.Income
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="wrapperIncome">
+    <h2 class="Theader">Details</h2>
+
+    <div>
+        <h4>Income</h4>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.IncomeSorce)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IncomeSorce)<br /><br />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IncomeAmount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IncomeAmount)<br /><br />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IncomeDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IncomeDate)<br /><br />
+            </dd>
+
+        </dl>
+    </div>
+
+
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDIncome }) |
+    @Html.ActionLink("Back to List", "Index")
+
+</div>
+
