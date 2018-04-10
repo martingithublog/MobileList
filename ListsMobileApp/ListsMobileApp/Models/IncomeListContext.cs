@@ -17,6 +17,9 @@ namespace ListsMobileApp.Models
 
         [Display(Name = "Amount")]
         public Nullable<decimal> ExpenseAmount { get; set; }
+
+        [DisplayFormat(DataFormatString ="{0:d}")]
+        public Nullable<System.DateTime> ExpenseDate { get; set; }
     }
 
 
@@ -33,5 +36,8 @@ namespace ListsMobileApp.Models
 
         [Display(Name = "Amount")]
         public int IncomeAmount { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public Nullable<System.DateTime> IncomeDate { get; set; }
     }
 }
